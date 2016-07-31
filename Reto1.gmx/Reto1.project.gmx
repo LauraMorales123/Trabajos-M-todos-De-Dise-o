@@ -5,9 +5,41 @@
   </Configs>
   <NewExtensions/>
   <sounds name="sound"/>
-  <sprites name="sprites"/>
+  <sprites name="sprites">
+    <sprite>sprites\sprJugador</sprite>
+    <sprites name="sprLlavesRojas">
+      <sprite>sprites\sprLlaveRoja1</sprite>
+      <sprite>sprites\sprLlaveRoja2</sprite>
+      <sprite>sprites\sprLlaveRoja3</sprite>
+    </sprites>
+    <sprites name="sprLlavesVerdes">
+      <sprite>sprites\sprLlaveVerde1</sprite>
+      <sprite>sprites\sprLlaveVerde2</sprite>
+    </sprites>
+    <sprite>sprites\sprPuerta</sprite>
+    <sprite>sprites\sprMuro</sprite>
+    <sprite>sprites\sprMeta</sprite>
+  </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
+  <objects name="objects">
+    <object>objects\objJugador</object>
+    <objects name="objLlavesRojas">
+      <object>objects\objLlaveRoja1</object>
+      <object>objects\objLlaveRoja2</object>
+      <object>objects\objLlaveRoja3</object>
+    </objects>
+    <objects name="objLlavesVerdes">
+      <object>objects\objLlaveVerde1</object>
+      <object>objects\objLlaveVerde2</object>
+    </objects>
+    <object>objects\objMuro</object>
+    <object>objects\objMeta</object>
+    <object>objects\objPuerta</object>
+  </objects>
+  <rooms name="rooms">
+    <room>rooms\Reto1</room>
+  </rooms>
   <help>
     <rtf>help.rtf</rtf>
   </help>
