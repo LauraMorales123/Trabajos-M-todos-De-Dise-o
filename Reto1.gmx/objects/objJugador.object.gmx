@@ -27,11 +27,7 @@
             <kind>1</kind>
             <string>velocidad = 4;
 
-llaveroja1 = false;
-llaveroja2 = false;
-llaveroja3 = false;
-llaveverde1 = false;
-llaveverde2 = false;
+
 </string>
           </argument>
         </arguments>
@@ -78,89 +74,6 @@ if(keyboard_check(vk_down))
   {
   if(!place_meeting(x, y+velocidad, objMuro))&amp;&amp;(!place_meeting(x,y+velocidad, objPuerta))
   {y = y+velocidad;}
-  }
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>/// Gestion Llaves
-
-if(place_meeting(x,y, objLlaveRoja1))
-  {
-  with(objLlaveRoja1){instance_destroy();}
-  llaveroja1 = true;
-  }
-  
-if(place_meeting(x,y, objLlaveRoja2))
-  {
-  with(objLlaveRoja2){instance_destroy();}
-  llaveroja2 = true;
-  }
-  
-if(place_meeting(x,y, objLlaveRoja3))
-  {
-  with(objLlaveRoja3){instance_destroy();}
-  llaveroja3 = true;
-  }
-  
-if(place_meeting(x,y, objLlaveVerde1))
-  {
-  with(objLlaveVerde1){instance_destroy();}
-  llaveverde1 = true;
-  }
-  
-if(place_meeting(x,y, objLlaveVerde2))
-  {
-  with(objLlaveVerde2){instance_destroy();}
-  llaveverde2 = true;
-  }
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>/// Gestion Puerta
-
-if(llaveverde2)
-  { 
- if(place_meeting(x+velocidad, y, objPuerta))||
-  (place_meeting(x-velocidad, y, objPuerta))||
-  (place_meeting(x, y-velocidad, objPuerta))||
-  (place_meeting(x, y+velocidad, objPuerta))
-  {
-  with(objPuerta){instance_destroy();}
-  }
   }
 </string>
           </argument>
