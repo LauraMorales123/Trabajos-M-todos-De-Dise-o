@@ -49,7 +49,8 @@
           <argument>
             <kind>1</kind>
             <string>if(y &lt; -sprite_heigh){
-   instance_destroy();
+  x = irandom_range(sprite_width/2, room_width - sprite_width/2);
+  y = room_height + sprite_height/2;
 }
 </string>
           </argument>
@@ -78,7 +79,8 @@ with(other){ // the bullet
     instance_destroy();
 }
 instance_create(x,y, obj_exploEnemy);
-instance_destroy();
+x = irandom_range(sprite_width/2, room_width - sprite_width/2);
+y = room_height + sprite_height/2;
 score = score + 40;
 show_debug_message("score: " + string(score));
 </string>
@@ -106,7 +108,8 @@ show_debug_message("score: " + string(score));
             <string>audio_play_sound(snd_exploEnemy, 10, false);
 instance_create(x,y, obj_exploEnemy);
 health -= 30;
-instance_destroy();
+x = irandom_range(sprite_width/2, room_width - sprite_width/2);
+y = room_height + sprite_height/2;
 </string>
           </argument>
         </arguments>
