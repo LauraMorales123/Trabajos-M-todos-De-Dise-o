@@ -33,8 +33,8 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\Nivel1</room>
-    <room>rooms\Nivel2</room>
-    <room>rooms\Nivel3</room>
+    <room>rooms\Game_Over</room>
+    <room>rooms\Win</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
