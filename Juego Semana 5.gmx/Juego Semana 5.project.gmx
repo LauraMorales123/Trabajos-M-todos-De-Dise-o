@@ -16,10 +16,18 @@
     <sprite>sprites\sprBala1</sprite>
     <sprite>sprites\sprBala2</sprite>
     <sprite>sprites\sprMuro</sprite>
+    <sprite>sprites\sprPuerta</sprite>
     <sprite>sprites\sprLlave</sprite>
     <sprite>sprites\sprMeta</sprite>
+    <sprite>sprites\sprVida</sprite>
+    <sprite>sprites\sprBarraVida</sprite>
+    <sprite>sprites\sprExplotaJugador</sprite>
+    <sprite>sprites\sprExplotaEnemigo</sprite>
   </sprites>
-  <backgrounds name="background"/>
+  <backgrounds name="background">
+    <background>background\GameOver</background>
+    <background>background\YouWin</background>
+  </backgrounds>
   <paths name="paths"/>
   <objects name="objects">
     <object>objects\objJugador</object>
@@ -30,6 +38,11 @@
     <object>objects\objMuro</object>
     <object>objects\objLlave</object>
     <object>objects\objMeta</object>
+    <object>objects\obj_Controller_life</object>
+    <object>objects\objExplotaJugador</object>
+    <object>objects\objExplotaEnemigo</object>
+    <object>objects\objPuerta</object>
+    <object>objects\objRestart</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\Nivel1</room>
