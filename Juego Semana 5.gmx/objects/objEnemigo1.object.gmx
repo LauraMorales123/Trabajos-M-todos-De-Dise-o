@@ -74,9 +74,10 @@ if(place_meeting(x, y+vsp, objMuro)){
     y += sign(vsp);
     }
     vsp = 0;
-      if(!position_meeting((x+(sprite_width/2)*dir), y+(sprite_height/2)+6,objMuro))
+
+    if(!position_meeting((x+(sprite_width/2)*dir), y+(sprite_height/2)+6,objMuro))
     {
-    dir *=-1;
+        dir *=-1;
     }
 }
 y += vsp;
@@ -86,12 +87,14 @@ y += vsp;
  {
   if(objJugador.y &lt; y-16)
   {
-  with(objJugador) vsp = -jumpspeed;
-  instance_destroy();
+    with(objJugador) vsp = -jumpspeed;
+    
+    show_debug_message("pailas");
+    instance_destroy();
   }
   else  
   {
-  game_restart();
+    game_restart();
   }
 }
     

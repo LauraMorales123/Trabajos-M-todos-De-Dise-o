@@ -33,6 +33,7 @@ vsp = 0;
 movespeed = 4; 
 can_shoot = 3;
 llave = false;
+dir = 0;
 
 jumpspeed_normal = 7;
 jumpspeed_powerup = 10;
@@ -88,15 +89,30 @@ jumpspeed = jumpspeed_normal
 // Obtener las entradas de teclado 
 key_right = keyboard_check(vk_right); 
 key_left = keyboard_check(vk_left);
-key_up = keyboard_check_pressed(vk_up);
+key_up = keyboard_check_pressed(vk_up); 
+
+
+/// Cambio de color
+if(key_right){
+    sprite_index = sprDerecha;
+    dir = 1;
+}
+
+if (place_meeting(x, y+1, objMuro))&amp;&amp;(move==0){
+    if(dir==1){
+        sprite_index = sprDerechaQuieto;
+    }
+}
+
+
 
 // Operaciones con las entradas de teclado 
 move = key_right - key_left;
 hsp = move * movespeed; 
 
 // Colisión horizontal 
-if(place_meeting(x+hsp, y, objMuro)){
-   while(!place_meeting(x+sign(hsp), y, objMuro)){
+if(place_meeting(x+hsp, y, objMuro))||(place_meeting(x+hsp, y, objPuerta)){
+   while(!place_meeting(x+sign(hsp), y, objMuro))&amp;&amp;(!place_meeting(x+hsp, y, objPuerta)){
     x += sign(hsp);
     }
     hsp = 0;
@@ -142,14 +158,16 @@ y += vsp;
             <kind>1</kind>
             <string>/// Disparar
 
-fire = keyboard_check(vk_space);
+fire = keyboard_check_pressed(vk_space);
 
-if(fire){
-    if(can_shoot){
-        instance_create(x, y, objBala1);
-        can_shoot = 0;
-        alarm[0] = 10;
+if(fire &amp;&amp; can_shoot != 0){
+    if (can_shoot ==3){
+        alarm[0] = 30;
     }
+    
+    can_shoot = can_shoot -1;
+    instance_create(x, y, objBala1);
+            
 }
 </string>
           </argument>
@@ -200,15 +218,8 @@ if(place_meeting(x,y, objLlave))
             <kind>1</kind>
             <string>/// Gestion de Puerta
 
-if(llave)
-  {
-  if(place_meeting(x, y, objPuerta))||
-  (place_meeting(x, y, objPuerta))||
-  (place_meeting(x, y, objPuerta))||
-  (place_meeting(x, y, objPuerta))
-   {
+if(llave){
    with(objPuerta){instance_destroy();}
-   }
   }
 </string>
           </argument>
