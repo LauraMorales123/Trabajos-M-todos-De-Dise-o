@@ -14,6 +14,7 @@
     <sprite>sprites\sprArriba</sprite>
     <sprite>sprites\sprAbajo</sprite>
     <sprite>sprites\sprDerechaQuieto</sprite>
+    <sprite>sprites\sprIzquierdaQuieto</sprite>
     <sprite>sprites\sprBala1</sprite>
     <sprite>sprites\sprBala2</sprite>
     <sprite>sprites\sprMuro</sprite>

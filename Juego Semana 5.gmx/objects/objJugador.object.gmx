@@ -103,7 +103,19 @@ if (place_meeting(x, y+1, objMuro))&amp;&amp;(move==0){
         sprite_index = sprDerechaQuieto;
     }
 }
+if(key_left){
+    sprite_index = sprIzquierda;
+    dir = -1;
+}
 
+if (place_meeting(x, y+1, objMuro))&amp;&amp;(move==0){
+    if(dir==-1){
+        sprite_index = sprIzquierdaQuieto;
+    }
+}  
+if(key_up){
+    sprite_index = sprArriba;
+}
 
 
 // Operaciones con las entradas de teclado 
