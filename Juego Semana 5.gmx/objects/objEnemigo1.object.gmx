@@ -68,6 +68,12 @@ if(place_meeting(x+hsp, y, objMuro)){
 }
 x += hsp;
 
+// Disparar Horizontal 
+//if(dir==1){
+   //instance_create(x+hsp, y, objBala2)
+   //speed = 3;
+//}
+
 // Colisión vertical 
 if(place_meeting(x, y+vsp, objMuro)){
    while(!place_meeting(x, y+sign(vsp), objMuro)){
@@ -128,7 +134,6 @@ y += vsp;
 }
 instance_create(x,y, objExplotaEnemigo);
 instance_destroy();
-
 </string>
           </argument>
         </arguments>

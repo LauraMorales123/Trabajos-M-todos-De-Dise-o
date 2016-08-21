@@ -173,7 +173,7 @@ y += vsp;
 fire = keyboard_check_pressed(vk_space);
 
 if(fire &amp;&amp; can_shoot != 0){
-    if (can_shoot ==3){
+    if(can_shoot ==3){
         alarm[0] = 30;
     }
     
@@ -181,6 +181,7 @@ if(fire &amp;&amp; can_shoot != 0){
     instance_create(x, y, objBala1);
             
 }
+
 </string>
           </argument>
         </arguments>

@@ -140,7 +140,7 @@
     <instance objName="objMuro" x="320" y="192" name="inst_794F1C6A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objMuro" x="320" y="160" name="inst_72B88431" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objMuro" x="320" y="128" name="inst_E7D9C558" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objJugador" x="64" y="432" name="inst_16A19CCA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objJugador" x="48" y="176" name="inst_16A19CCA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objEnemigo1" x="288" y="80" name="inst_F47D2096" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objMuro" x="32" y="320" name="inst_79C6EB00" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objMuro" x="64" y="320" name="inst_962ADA1B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
