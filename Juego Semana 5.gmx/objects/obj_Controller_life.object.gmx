@@ -27,6 +27,7 @@
             <kind>1</kind>
             <string>lives = 3;
 health = 100;
+score = 0;
 </string>
           </argument>
         </arguments>
@@ -53,11 +54,45 @@ health = 100;
 
 if(health &lt;= 0){
     health = 100;
+    with(objJugador){
+    instance_change(objExplotaJugador, false);
+    }
 }
 
 if(lives &lt;= 0){
     room_goto(Game_Over);
 }
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Barra de Vidas
+
+draw_healthbar(48, 384, 128, 36, health, c_black, c_red, c_green, 0, true, true);
+
+for(i=0; i &lt; lives; i +=1){
+    draw_sprite(sprVida, -1, 50+32*i, 32);
+    };
+    
 
 </string>
           </argument>

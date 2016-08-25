@@ -26,6 +26,10 @@
           <argument>
             <kind>1</kind>
             <string>hspeed = 3;
+
+if keyboard_check(vk_left){
+   hspeed = -3;
+}
 </string>
           </argument>
         </arguments>

@@ -117,7 +117,6 @@ if(key_up){
     sprite_index = sprArriba;
 }
 
-
 // Operaciones con las entradas de teclado 
 move = key_right - key_left;
 hsp = move * movespeed; 

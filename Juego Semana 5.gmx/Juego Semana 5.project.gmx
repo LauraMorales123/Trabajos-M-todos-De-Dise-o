@@ -22,7 +22,6 @@
     <sprite>sprites\sprLlave</sprite>
     <sprite>sprites\sprMeta</sprite>
     <sprite>sprites\sprVida</sprite>
-    <sprite>sprites\sprBarraVida</sprite>
     <sprite>sprites\sprExplotaJugador</sprite>
     <sprite>sprites\sprExplotaEnemigo</sprite>
   </sprites>
