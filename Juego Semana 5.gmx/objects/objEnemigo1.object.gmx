@@ -55,7 +55,9 @@ vsp = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>hsp = dir * movespeed;
+            <string>/// Movimiento del enemigo
+
+hsp = dir * movespeed;
 vsp += grav;
 
 // Colisión horizontal 
@@ -67,12 +69,6 @@ if(place_meeting(x+hsp, y, objMuro)){
     dir *= -1;
 }
 x += hsp;
-
-// Disparar Horizontal 
-//if(dir==1){
-   //instance_create(x+hsp, y, objBala2)
-   //speed = 3;
-//}
 
 // Colisión vertical 
 if(place_meeting(x, y+vsp, objMuro)){
@@ -90,25 +86,19 @@ y += vsp;
 
 // Colision enemigo
  if(place_meeting(x,y, objJugador))
- {
+{
   if(objJugador.y &lt; y-16)
-  {
+    { 
     with(objJugador) vsp = -jumpspeed;
     
     show_debug_message("pailas");
     instance_destroy();
-  }
-  else  
-  {
-    room_goto(Game_Over);
-  }
+    }
 }
 
-var die = floor(random(30)) + 1;
+var die = floor(random(20)) + 1;
 if(die == 1){
-  instance_create( x, y+16, objBala2);}
-    
- 
+  instance_create( x, y+32, objBala2);}
 
 
 </string>
@@ -137,6 +127,34 @@ if(die == 1){
     instance_destroy();
 }
 instance_create(x,y, objExplotaEnemigo);
+instance_destroy();
+audio_play_sound(sndExplotaEnemigo, 10, false);
+
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="objJugador">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Quitar vida
+health -= 25;
 instance_destroy();
 </string>
           </argument>

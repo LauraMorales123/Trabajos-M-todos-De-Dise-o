@@ -25,9 +25,10 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>lives = 3;
+            <string>score = 0;
+lives = 3;
 health = 100;
-score = 0;
+
 </string>
           </argument>
         </arguments>
@@ -54,6 +55,7 @@ score = 0;
 
 if(health &lt;= 0){
     health = 100;
+    audio_play_sound(sndMuerte, 10, false);
     with(objJugador){
     instance_change(objExplotaJugador, false);
     }
@@ -87,12 +89,11 @@ if(lives &lt;= 0){
             <kind>1</kind>
             <string>/// Barra de Vidas
 
-draw_healthbar(48, 384, 128, 36, health, c_black, c_red, c_green, 0, true, true);
+draw_healthbar(48, 384, 144, 351, health, c_black, c_red, c_green, 0, true, true);
 
 for(i=0; i &lt; lives; i +=1){
-    draw_sprite(sprVida, -1, 50+32*i, 32);
-    };
-    
+    draw_sprite(sprVida, -1, 50+30*i,352);
+}    
 
 </string>
           </argument>

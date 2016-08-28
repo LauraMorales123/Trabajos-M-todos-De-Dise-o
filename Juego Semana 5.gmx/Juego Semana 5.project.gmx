@@ -4,7 +4,13 @@
     <Config>Configs\Default</Config>
   </Configs>
   <NewExtensions/>
-  <sounds name="sound"/>
+  <sounds name="sound">
+    <sound>sound\sndCogerLlave</sound>
+    <sound>sound\sndMeta</sound>
+    <sound>sound\sndPuerta</sound>
+    <sound>sound\sndMuerte</sound>
+    <sound>sound\sndExplotaEnemigo</sound>
+  </sounds>
   <sprites name="sprites">
     <sprite>sprites\sprEnemigo1</sprite>
     <sprite>sprites\sprEnemigo2</sprite>
@@ -40,10 +46,10 @@
     <object>objects\objLlave</object>
     <object>objects\objMeta</object>
     <object>objects\obj_Controller_life</object>
-    <object>objects\objExplotaJugador</object>
-    <object>objects\objExplotaEnemigo</object>
     <object>objects\objPuerta</object>
     <object>objects\objRestart</object>
+    <object>objects\objExplotaEnemigo</object>
+    <object>objects\objExplotaJugador</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\Nivel1</room>

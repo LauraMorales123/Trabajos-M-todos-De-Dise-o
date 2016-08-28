@@ -92,31 +92,6 @@ key_left = keyboard_check(vk_left);
 key_up = keyboard_check_pressed(vk_up); 
 
 
-/// Cambio de color
-if(key_right){
-    sprite_index = sprDerecha;
-    dir = 1;
-}
-
-if (place_meeting(x, y+1, objMuro))&amp;&amp;(move==0){
-    if(dir==1){
-        sprite_index = sprDerechaQuieto;
-    }
-}
-if(key_left){
-    sprite_index = sprIzquierda;
-    dir = -1;
-}
-
-if (place_meeting(x, y+1, objMuro))&amp;&amp;(move==0){
-    if(dir==-1){
-        sprite_index = sprIzquierdaQuieto;
-    }
-}  
-if(key_up){
-    sprite_index = sprArriba;
-}
-
 // Operaciones con las entradas de teclado 
 move = key_right - key_left;
 hsp = move * movespeed; 
@@ -207,6 +182,7 @@ if(place_meeting(x,y, objLlave))
   {
   with(objLlave){instance_destroy();}
   llave = true;
+  audio_play_sound(sndCogerLlave, 10, false);
   }
 </string>
           </argument>
@@ -237,6 +213,58 @@ if(llave){
           </argument>
         </arguments>
       </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Cambio de color
+
+if(vsp &gt; 0.2)&amp;&amp; !place_meeting(x, y+1, objMuro)
+   {
+   sprite_index = sprAbajo;
+}
+
+if(key_right){
+    sprite_index = sprDerecha;
+    dir = 1;
+}
+
+if (place_meeting(x, y+1, objMuro))&amp;&amp;(move==0){
+    if(dir==1){
+        sprite_index = sprDerechaQuieto;
+    }
+}
+if(key_left){
+    sprite_index = sprIzquierda;
+    dir = -1;
+}
+
+if (place_meeting(x, y+1, objMuro))&amp;&amp;(move==0){
+    if(dir==-1){
+        sprite_index = sprIzquierdaQuieto;
+    }
+}  
+if(key_up){
+    sprite_index = sprArriba;
+}
+
+
+</string>
+          </argument>
+        </arguments>
+      </action>
     </event>
     <event eventtype="4" ename="objMeta">
       <action>
@@ -255,7 +283,8 @@ if(llave){
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>room_goto(Win) 
+            <string>audio_play_sound(sndMeta, 10, false); 
+room_goto(Win) 
 </string>
           </argument>
         </arguments>
