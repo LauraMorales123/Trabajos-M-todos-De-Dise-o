@@ -96,9 +96,9 @@ y += vsp;
     }
 }
 
-var die = floor(random(20)) + 1;
+var die = floor(random(50)) + 1;
 if(die == 1){
-  instance_create( x, y+32, objBala2);}
+  instance_create( x, y, objBala2);}
 
 
 </string>

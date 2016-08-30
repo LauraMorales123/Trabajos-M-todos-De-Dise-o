@@ -91,6 +91,8 @@ key_right = keyboard_check(vk_right);
 key_left = keyboard_check(vk_left);
 key_up = keyboard_check_pressed(vk_up); 
 
+if(key_right){ dir = 1;}
+if(key_left){ dir = -1;}
 
 // Operaciones con las entradas de teclado 
 move = key_right - key_left;

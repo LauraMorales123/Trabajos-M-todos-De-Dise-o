@@ -25,7 +25,11 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>hspeed = 3;
+            <string>if(objEnemigo1.dir == 1) hspeed = 5;
+if(objEnemigo1.dir == -1){
+   image_xscale = -1;
+   hspeed = -5;
+}
 
 
 </string>
